@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismatou Souare | Software Engineer - Python, Java & GenAI</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar and subtle selection */
+        ::selection {
+            background-color: #334155;
+            color: #ffffff;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-slate-900 selection:text-white">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-bold tracking-tight text-slate-900 text-lg">
+                ISMATOU SOUARE<span class="text-indigo-600">.</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-slate-900 transition-colors">Profil</a>
+                <a href="#skills" class="hover:text-slate-900 transition-colors">Compétences</a>
+                <a href="#experience" class="hover:text-slate-900 transition-colors">Expériences</a>
+                <a href="#projects" class="hover:text-slate-900 transition-colors">Projets</a>
+                <a href="#contact" class="hover:text-slate-900 transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="mailto:ismatousouare@yahoo.fr" class="hidden sm:inline-flex items-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition-colors shadow-sm">
+                    Me contacter
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-slate-700 hover:text-slate-900 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3">
+            <a href="#about" class="block text-sm font-medium text-slate-600 hover:text-slate-900">Profil</a>
+            <a href="#skills" class="block text-sm font-medium text-slate-600 hover:text-slate-900">Compétences</a>
+            <a href="#experience" class="block text-sm font-medium text-slate-600 hover:text-slate-900">Expériences</a>
+            <a href="#projects" class="block text-sm font-medium text-slate-600 hover:text-slate-900">Projets</a>
+            <a href="#contact" class="block text-sm font-medium text-slate-600 hover:text-slate-900">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-14 md:pt-36 md:pb-20 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+                <div class="md:col-span-8">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold tracking-wide uppercase mb-4">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span>Disponible pour opportunité</span>
+                    </div>
+                    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4">
+                        Software Engineer <br><span class="text-indigo-600">Python, Java & GenAI</span>
+                    </h1>
+                    <p class="text-base md:text-lg text-slate-600 leading-relaxed mb-6">
+                        Software Engineer orientée backend, spécialisée dans la conception d'API REST robustes, l'architecture microservices, les SaaS multi-tenant et l'intégration de solutions GenAI (RAG, LangChain, LangGraph).
+                    </p>
+                    <div class="flex flex-wrap gap-3 items-center">
+                        <a href="#experience" class="px-5 py-2.5 text-sm font-medium text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition-colors shadow-sm flex items-center space-x-2">
+                            <span>Voir mon parcours</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="https://github.com/ismatousouare" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 text-sm font-medium text-slate-700 bg-white border border-slate-300 rounded-lg hover:bg-slate-50 transition-colors flex items-center space-x-2">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/ismatous" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 text-sm font-medium text-slate-700 bg-white border border-slate-300 rounded-lg hover:bg-slate-50 transition-colors flex items-center space-x-2">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Profile Image -->
+                <div class="md:col-span-4 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-1 bg-slate-200 rounded-2xl blur-xs opacity-50"></div>
+                        <div class="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border-2 border-slate-200 shadow-md bg-slate-100">
+                           <img src="photo.jpeg" alt="Ismatou Souare" class="w-full h-full object-cover object-top">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Summary -->
+    <section id="about" class="py-14 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                <div>
+                    <h2 class="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-1">À propos</h2>
+                    <h3 class="text-xl font-bold text-slate-900">Profil & Localisation</h3>
+                    <div class="mt-4 space-y-2 text-sm text-slate-600">
+                        <p class="flex items-center space-x-3"><i class="fa-solid fa-location-dot w-5 text-indigo-600"></i><span>Paris, France (Remote / Hybride)</span></p>
+                        <p class="flex items-center space-x-3"><i class="fa-solid fa-envelope w-5 text-indigo-600"></i><span>ismatousouare@yahoo.fr</span></p>
+                        <!--<p class="flex items-center space-x-3"><i class="fa-solid fa-phone w-5 text-indigo-600"></i><span>06 35 37 60 36</span></p>-->
+                        <p class="flex items-center space-x-3"><i class="fa-solid fa-graduation-cap w-5 text-indigo-600"></i><span>Master - Dev Logiciel, Mobile & IoT (Webitech)</span></p>
+                    </div>
+                </div>
+                <div class="md:col-span-2 bg-white p-6 md:p-8 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                    <h4 class="text-base font-semibold text-slate-900">Expertise technique & vision</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Habituée à construire des services maintenables, traçables et intégrables. Je combine une solide expérience en entreprise sur des environnements Java/Spring Boot avec une appétence marquée pour les technologies d'intelligence artificielle générative (RAG, LangGraph, Qdrant) et le développement Python moderne (FastAPI, Django).
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Rigoureuse, orientée qualité et sécurité (JWT, RBAC, conformité AI Act), je m'implique de la phase de conception d'architecture microservices ou multi-tenant jusqu'aux tests automatisés et au déploiement conteneurisé (Docker, CI/CD).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills" class="py-14 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="mb-8">
+                <h2 class="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-1">Expertise</h2>
+                <h3 class="text-xl font-bold text-slate-900">Compétences Techniques</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Skill card 1 -->
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition-all">
+                    <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-code text-base"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-900 mb-1.5 text-sm">Langages & Backend</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Python, Java, FastAPI, Django REST Framework, Spring Boot, API REST.
+                    </p>
+                </div>
+                <!-- Skill card 2 -->
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition-all">
+                    <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-brain text-base"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-900 mb-1.5 text-sm">GenAI & RAG</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        LangChain, LangGraph, Qdrant, Langfuse, RAG, intégration LLM, routage multi-modèles.
+                    </p>
+                </div>
+                <!-- Skill card 3 -->
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition-all">
+                    <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-network-wired text-base"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-900 mb-1.5 text-sm">Architecture & Sécurité</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Microservices, SaaS multi-tenant, Spring Cloud, API Gateway, JWT, RBAC, Spring Security.
+                    </p>
+                </div>
+                <!-- Skill card 4 -->
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition-all">
+                    <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-database text-base"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-900 mb-1.5 text-sm">Data & Asynchrone</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        PostgreSQL, MongoDB, MySQL, Redis, Celery, Django Channels.
+                    </p>
+                </div>
+                <!-- Skill card 5 -->
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition-all">
+                    <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-toolbox text-base"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-900 mb-1.5 text-sm">DevOps & Qualité</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Docker, Docker Compose, GitLab CI/CD, GitHub Actions, Pytest, JUnit, Mockito.
+                    </p>
+                </div>
+                <!-- Skill card 6 -->
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition-all">
+                    <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-laptop-code text-base"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-900 mb-1.5 text-sm">Frontend & Outils</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        React, Angular, Angular Material, Jira, Confluence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="experience" class="py-14 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="mb-8">
+                <h2 class="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-1">Parcours</h2>
+                <h3 class="text-xl font-bold text-slate-900">Expériences Professionnelles</h3>
+            </div>
+            <div class="space-y-8">
+                <!-- Exp 1 -->
+                <div class="bg-white p-6 md:p-8 rounded-xl border border-slate-200 shadow-sm relative">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                        <div>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 uppercase tracking-wide">2026 - en cours</span>
+                            <h4 class="text-lg font-bold text-slate-900 mt-2">Software Engineer Python / GenAI</h4>
+                            <p class="text-indigo-600 font-medium text-xs">GTrust - Intelligence documentaire gouvernée • Remote / France</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-xs md:text-sm mb-3">Plateforme permettant aux organisations d'interroger leurs documents en langage naturel avec traçabilité des sources, isolation des données et validation humaine.</p>
+                    <ul class="space-y-1.5 text-xs md:text-sm text-slate-600 list-disc list-inside mb-4">
+                        <li>Conception d'un pipeline RAG produisant des réponses sourcées (documents, versions, passages).</li>
+                        <li>Développement des services backend et API REST en Python / FastAPI.</li>
+                        <li>Orchestration des workflows d'ingestion, recherche et génération avec LangChain / LangGraph.</li>
+                        <li>Intégration de Qdrant pour la recherche vectorielle et mise en place d'un routage multi-modèles avec fallback.</li>
+                        <li>Architecture multi-tenant avec isolation par organisation et workflow Human-in-the-Loop.</li>
+                        <li>Utilisation de Langfuse pour l'observabilité et contribution aux mécanismes de conformité AI Act.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100">
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">Python</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">FastAPI</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">LangChain</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">LangGraph</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">Qdrant</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">Langfuse</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">Docker</span>
+                    </div>
+                </div>
+
+                <!-- Exp 2 -->
+                <div class="bg-white p-6 md:p-8 rounded-xl border border-slate-200 shadow-sm relative">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                        <div>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 uppercase tracking-wide">2026 - en cours</span>
+                            <h4 class="text-lg font-bold text-slate-900 mt-2">Software Engineer Python / Full Stack</h4>
+                            <p class="text-indigo-600 font-medium text-xs">Plateforme SaaS de gestion médicale • Remote / France</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-xs md:text-sm mb-3">SaaS multi-tenant couvrant le parcours patient et les opérations de cliniques, centres de santé, laboratoires et établissements médicaux.</p>
+                    <ul class="space-y-1.5 text-xs md:text-sm text-slate-600 list-disc list-inside mb-4">
+                        <li>Développement d'une API REST avec Django REST Framework (rendez-vous, dossiers patients, facturation, pharmacie, etc.).</li>
+                        <li>Conception de l'architecture SaaS multi-tenant avec <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">django-tenants</code>.</li>
+                        <li>Mise en place de l'authentification JWT, RBAC et traitements asynchrones avec Celery / Redis.</li>
+                        <li>Utilisation de Django Channels pour les besoins temps réel et interface React frontend.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100">
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">Django REST</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">React</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">PostgreSQL</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">Celery / Redis</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">JWT & RBAC</span>
+                    </div>
+                </div>
+
+                <!-- Exp 3 -->
+                <div class="bg-white p-6 md:p-8 rounded-xl border border-slate-200 shadow-sm relative">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                        <div>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 uppercase tracking-wide">2022 - 2024</span>
+                            <h4 class="text-lg font-bold text-slate-900 mt-2">Développeuse Full Stack</h4>
+                            <p class="text-indigo-600 font-medium text-xs">SKAIZen Group • Paris, France</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-1.5 text-xs md:text-sm text-slate-600 list-disc list-inside mb-4">
+                        <li>Développement et maintenance de services backend en Java / Spring Boot au sein d'une architecture microservices.</li>
+                        <li>Conception d'API REST sécurisées avec DTO et mapping, système de transformation et routage de flux de données.</li>
+                        <li>Intégration d'Eureka Server pour la découverte de services et Spring Cloud Gateway pour le routage centralisé.</li>
+                        <li>Fiabilisation avec JUnit / Mockito, monitoring avec Spring Boot Admin et participation aux rituels Scrum.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100">
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">Java</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">Spring Boot</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">Spring Cloud</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">JUnit / Mockito</span>
+                        <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded font-medium">Angular</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Engineering Projects -->
+    <section id="projects" class="py-14 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="mb-8">
+                <h2 class="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-1">Réalisations</h2>
+                <h3 class="text-xl font-bold text-slate-900">Projet Notable</h3>
+            </div>
+            <div class="bg-slate-50 p-6 md:p-8 rounded-xl border border-slate-200">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                    <div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 uppercase tracking-wide">Projet Personnel - 2026</span>
+                        <h4 class="text-lg font-bold text-slate-900 mt-2">LMS Tech avec tuteur IA</h4>
+                    </div>
+                </div>
+                <p class="text-slate-600 text-xs md:text-sm mb-3">Plateforme LMS dédiée aux formations techniques intégrant un tuteur IA conversationnel pour accompagner les apprenants sur des parcours Python, Backend, DevOps et Cloud.</p>
+                <ul class="space-y-1.5 text-xs md:text-sm text-slate-600 list-disc list-inside mb-4">
+                    <li>Système RAG exploitant les supports de cours et documentations pour des réponses contextualisées et sourcées.</li>
+                    <li>Tuteur adaptatif capable d'expliquer, générer des quiz, analyser les réponses et s'adapter au niveau.</li>
+                    <li>Orchestration LLM avec LangGraph / LangChain (mémoire conversationnelle, réponses structurées).</li>
+                    <li>API FastAPI exposant les fonctionnalités de gestion des utilisateurs, formations, progression et historique.</li>
+                </ul>
+                <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200">
+                    <span class="px-2 py-0.5 bg-white text-slate-700 text-xs rounded border border-slate-200 font-medium">FastAPI</span>
+                    <span class="px-2 py-0.5 bg-white text-slate-700 text-xs rounded border border-slate-200 font-medium">LangGraph / LangChain</span>
+                    <span class="px-2 py-0.5 bg-white text-slate-700 text-xs rounded border border-slate-200 font-medium">RAG</span>
+                    <span class="px-2 py-0.5 bg-white text-slate-700 text-xs rounded border border-slate-200 font-medium">PostgreSQL / pgvector</span>
+                    <span class="px-2 py-0.5 bg-white text-slate-700 text-xs rounded border border-slate-200 font-medium">OpenAI / Gemini / Mistral</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="py-12 bg-slate-900 text-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center pb-8 border-b border-slate-800">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Envie de collaborer ?</h3>
+                    <p class="text-slate-400 text-xs">Je suis à l'écoute d'opportunités en tant que Software Engineer. N'hésitez pas à m'écrire.</p>
+                </div>
+                <div class="flex md:justify-end">
+                    <a href="mailto:ismatousouare@yahoo.fr" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 transition-colors text-white text-xs font-semibold rounded-lg shadow-sm flex items-center space-x-2">
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                        <span>ismatousouare@yahoo.fr</span>
+                    </a>
+                </div>
+            </div>
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; 2026 Ismatou Souare. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-3 sm:mt-0">
+                    <a href="https://github.com/ismatousouare" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">GitHub</a>
+                    <a href="https://linkedin.com/in/ismatous" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">LinkedIn</a>
+                    <a href="mailto:ismatousouare@yahoo.fr" class="hover:text-slate-300 transition-colors">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive script for mobile navigation -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
